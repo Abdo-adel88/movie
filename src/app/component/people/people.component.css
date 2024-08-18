@@ -1,0 +1,30 @@
+
+
+::ng-deep .p-paginator-pages button {
+    background-color: #80151c !important;
+    /* Different color for active page */
+    border: 1px solid orange !important;
+    color: white !important;
+    margin: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+::ng-deep .p-component button {
+    background-color: #80151c !important;
+    /* Different color for active page */
+    border: 1px solid orange !important;
+    color: white !important;
+    margin: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+::ng-deep .p-paginator-pages button.p-highlight {
+    background-color: white !important;
+    /* Different color for active page */
+    color: black !important;
+    border-color: black !important;
+}

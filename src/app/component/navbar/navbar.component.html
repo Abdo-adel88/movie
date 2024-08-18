@@ -1,0 +1,70 @@
+
+
+
+<nav class="navbar zee position-fixed w-100 top-0 navbar-expand-lg  bg-nav">
+
+  <div class="container ">
+    <a class="navbar-brand  text-danger fw-bold   fs-3  m-0 p-0">
+      <img width="130" class=""
+        src="assets/images/Netflix_Logo_PMS.png" alt=""></a>
+        <button class="navbar-toggler  bg-red" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white fs-3"></i>
+      </button>
+
+      
+    <div class="collapse navbar-collapse ms-md-5 color-nav" id="navbarSupportedContent">
+      <ul *ngIf="isLogeedUser" class="navbar-nav  ms-md-5 ps-md-5 mb-2 mb-lg-0 ">
+        <li class="nav-item ms-md-5 ps-md-5 ">
+          <a class="nav-link color-nav    pointer-event  fw-bold"
+          routerLinkActive="  text-red  border-bottom  border-white fw-bolder" routerLink="/home">Home</a>        </li>
+
+
+
+        <li class="nav-item ms-md-5 ps-md-5">
+          <a class="nav-link  color-nav  pointer-event  fw-bold"
+          routerLinkActive="  text-red border-bottom border-white fw-bolder" routerLink="/movies">Movies</a>
+        </li>
+
+        <li class="nav-item ms-md-5 ps-md-5">
+          <a class="nav-link  color-nav  pointer-event  fw-bold"
+                  routerLinkActive="  text-red border-bottom border-white fw-bolder" routerLink="/tv-show">Tv-Show</a>
+        </li>
+        <li class="nav-item ms-md-5 ps-md-5">
+          <a class="nav-link color-nav  pointer-event  fw-bold"
+          routerLinkActive="  text-red  border-bottom border-white fw-bolder" routerLink="/people">People</a>        </li>
+
+
+      </ul>
+      <ul class="navbar-nav  ms-md-auto mb-2 mb-lg-0 d-flex align-items-start justify-content-center ">
+
+
+
+
+
+
+        <div *ngIf="isLogeedUser" class="btn-group text-center p-0 m-0 border-0" role="group">
+          <button *ngIf="isLogeedUser" type="button" class="btn p-0 m-0 pt-3 dropdown-toggle border-0"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <li *ngIf="isLogeedUser" class="nav-item  p-0 m-0">
+              <a class="nav-link color-nav p-0 m-0 mt-1 w-100  fw-bold text-red"><i class="fa-solid fa-user text-white me-2"></i> Hi, {{userName}}
+              </a>
+            </li>
+
+          </button>
+
+          <ul class="dropdown-menu bg-red text-white">
+            <li *ngIf="isLogeedUser" class="nav-item w-btn text-center">
+              <a (click)="signout()" class="nav-link text-white dropdown-item w-btn text-center" routerLink="register">SignOut</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

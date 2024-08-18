@@ -1,0 +1,31 @@
+<div class="background" [ngStyle]="{'background-image': 'url('+originalPoster+imgPath+')'}">
+    <div class="layer ">
+        <div class=" ">
+            
+            <div class="bg-headd overflow-hidden w-100 vh-100 mx-auto d-flex align-items-center position-relative">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="h1 fs text-center text-red mb-5 pb-5 position-absolute ">NETFLIX</h1>
+                <p class=" fs-p text-center text-white mb-5 pb-5 position-absolute ">ALL INFOMATION ABOUT YOUR MOVIE NIGHT! </p>
+                </div>
+                <div class="container   position-absolute startt">
+
+                    <div class="mb-5 pb-5">
+                        <owl-carousel-o [options]="customOptions" (translated)="onSlideChange($event)">
+                            <ng-container *ngFor="let movie of treandingMovies">
+                                <ng-template carouselSlide [id]="movie.id">
+                                    <a class="text-decoration-none" [routerLink]="['/moviedetails', movie.id]">
+                                        <div class=" rounded-2">
+                                            <img class="border border-warning rounded-2"
+                                                [src]="imagePrefix + movie.poster_path" [alt]="movie.alt"
+                                                [title]="movie.title">
+                                        </div>
+                                    </a>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

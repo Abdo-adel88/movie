@@ -1,0 +1,121 @@
+/* Ensure the modal overlay covers the entire screen */
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center the modal dialog and adjust its size */
+.modal-dialog {
+    max-width: 50%;
+    /* Modal occupies 50% of the screen width */
+    max-height: 50%;
+    /* Modal occupies 50% of the screen height */
+    margin: auto;
+    transform: none;
+    /* Remove any transformation to center vertically */
+}
+
+/* Maintain the aspect ratio and size the iframe */
+.ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Close button styling */
+.modal-header .btn-close {
+    background-color: white;
+    border: none;
+    color: red !important;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-header .btn-close:hover {
+    color: red !important;
+}
+
+/* Make modal close when clicking outside of it */
+.modal {
+    cursor: pointer;
+}
+
+.modal-dialog {
+    cursor: auto;
+    /* Prevent closing when clicking inside the modal */
+}
+
+.modal-dialog {
+    position: relative;
+    width: 100% !important;
+    margin: var(--bs-modal-margin);
+    pointer-events: none;
+}
+
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+
+
+    .modal {
+        display: block;
+        margin-top: 90px;
+        margin-left: 50px;
+        width: 70%;
+        height: 70%;
+        z-index: 1050;
+        background-color: rgba(0, 0, 0, 0.5);
+
+    }
+
+    /* Center the modal dialog and make it full-screen on mobile */
+    .modal-dialog {
+        max-width: 90%;
+        /* Modal occupies 90% of the screen width */
+        max-height: 100%;
+        /* Modal occupies 90% of the screen height */
+        margin: auto;
+        transform: none;
+    }
+
+    /* Maintain the aspect ratio and increase the size of the iframe */
+    .ratio {
+        width: 100%;
+        padding-bottom: 75%;
+        /* Adjusted for better visibility on smaller screens */
+    }
+
+    .ratio iframe {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .modal-header .btn-close {
+        font-size: 16px;
+        /* Smaller close button on mobile */
+    }
+
+    .modal-header h2.modal-title {
+        font-size: 1.5rem;
+        /* Adjust the title font size */
+    }
+}

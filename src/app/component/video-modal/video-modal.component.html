@@ -1,0 +1,15 @@
+<div class="modal overflow-hidden " tabindex="-1" *ngIf="videoKey" (click)="closeModal()">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg" (click)="$event.stopPropagation()">
+        <div class="modal-content  bg-black">
+            <div class="modal-header">
+                <h2 class="modal-title m-0 p-0 text-red">Trailer</h2>
+                <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body ">
+                <div class="ratio  ratio-16x9">
+                    <iframe class="" [src]="youtubeUrl | safeUrl" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

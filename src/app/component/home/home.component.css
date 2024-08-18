@@ -1,0 +1,12 @@
+/* .h-div{
+    height: 500px !important;
+} */
+
+.bg-headr {
+    background-image: linear-gradient(to bottom, black 30%, #d9232e ) !important;
+}
+.w-mor{
+    height: 300px;
+     width: 200px;
+
+}

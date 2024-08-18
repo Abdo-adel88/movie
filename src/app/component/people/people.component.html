@@ -1,0 +1,48 @@
+<div class="bg-head">
+    <div class="container mt-5 pt-5">
+        <div class="row align-items-center justify-content-center ">
+            <div class="col-md-12 pading-left">
+                <h3 class="text-red text-center h1">People</h3>
+                <div class="borderr  mb-5 w-100 "></div>
+                <!-- <h2 class="text-white">Top Trending <span class="text-red">Tv-Show</span> To watch Right Now</h2>
+                <div class="borderr my-5 w-100"></div> -->
+            </div>
+
+            <div *ngFor="let movie of treandingMovies" class=" col-md-4 col-lg-3 col-sm-6   rounded-4">
+
+
+                <a class="text-decoration-none" [routerLink]="['/peopledetails',movie.id]">
+                    <div class="movies position-relative my-3 ">
+                        <img [src]="imagePrefix+movie.profile_path" class="w-imgg  rounded-4 " height="350" alt="">
+                        <div class="overlay rounded-4">
+                            <div class="pt-5 mt-4">
+                                <p class="text-center fw-bold mt-5 pt-5 text-warning">{{movie.name}}</p>
+                            </div>
+                        </div>
+                        <!-- <div
+                            class="vote rounded-circle text-center d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-star text-white "></i> {{movie.vote_average.toFixed(1)}}
+                        </div> -->
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center  w-50 flex-column ">
+                <div class="py-3">
+                    <p-paginator [rows]="2" [totalRecords]="20" (onPageChange)="getpage($event.page)">
+                    </p-paginator>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </div>
+</div>
+<svg viewBox="0 0 1440 320">
+    <path fill="#80151c" fill-opacity="1"
+        d="M0,128L30,138.7C60,149,120,171,180,181.3C240,192,300,192,360,170.7C420,149,480,107,540,85.3C600,64,660,64,720,74.7C780,85,840,107,900,138.7C960,171,1020,213,1080,197.3C1140,181,1200,107,1260,85.3C1320,64,1380,96,1410,112L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+    </path>
+</svg>
+

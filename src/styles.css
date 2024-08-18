@@ -1,1 +1,237 @@
 /* You can add global styles to this file, and also import other style files */
+.text-red {
+    color: #d9232e !important;
+}
+
+.bg-red {
+    background-color: #d9232e !important;
+}
+
+
+
+input.ng-invalid.ng-dirty {
+    border: 2px red solid;
+
+}
+
+input.ng-valid.ng-dirty {
+    border: 2px rgb(76, 220, 76) solid;
+}
+
+input.form-control:focus {
+    box-shadow: none !important;
+}
+
+
+.borderr {
+    background-color: #a8a8a83d;
+    height: 3px;
+}
+
+.w-img {
+    width: 100%;
+    height: 300px;
+}
+
+.w-imgg {
+    width: 100%;
+    height: 400px;
+}
+
+/* 
+@media only screen and (max-width: 576px) {
+    .w-img {
+        width: 100% !important;
+        height: 300px;
+      
+    }
+} */
+
+.pading-left {
+    padding-left: 21px;
+}
+
+.movies {
+    position: relative;
+    transition: transform 0.3s ease;
+
+}
+
+.movies:hover {
+    transform: scale(1.1);
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent black overlay */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.movies:hover .overlay {
+    opacity: 1;
+    /* Show the overlay on hover */
+}
+
+.vote {
+    position: absolute !important;
+    top: 0% !important;
+    left: 50% !important;
+    transform: translate(-50%, -40%) !important;
+    background-color: #feb139 !important;
+    width: 42px;
+    height: 42px;
+    font-size: .8rem !important;
+    background-color: rgb(255, 193, 7);
+    padding: 5px;
+    font-weight: 900;
+    color: #fff;
+
+}
+
+.bg-head {
+    background-image: linear-gradient(to bottom, black 65%, #80151c) !important;
+}
+
+::ng-deep .p-paginator-pages button {
+    background-color: #80151c !important;
+    /* Different color for active page */
+    border: 1px solid orange !important;
+    color: white !important;
+    margin: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+::ng-deep .p-component button {
+    background-color: #80151c !important;
+    /* Different color for active page */
+    border: 1px solid orange !important;
+    color: white !important;
+    margin: 6px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+::ng-deep .p-paginator-pages button.p-highlight {
+    background-color: white !important;
+    /* Different color for active page */
+    color: black !important;
+    border-color: black !important;
+}
+
+/* In styles.css or styles.scss */
+/* .owl-carousel .owl-stage-outer {
+    overflow: visible !important;
+}
+
+.owl-carousel .owl-item {
+    transform-origin: center !important;
+    transition: transform 0.3s ease !important;
+}
+
+.owl-carousel .owl-item.active.center {
+    transform: scale(1.7) !important;
+    z-index: 2 !important;
+}
+
+ .owl-carousel .owl-item.active {
+    transform: scale(1.1) !important;
+}
+
+.owl-carousel .owl-item {
+    z-index: 1 !important;
+}  */
+
+
+
+
+
+
+
+
+.owl-carousel .owl-item {
+    transform-origin: center !important;
+    transition: transform 0.3s ease, z-index 0.3s ease !important;
+    z-index: 1 !important;
+    /* All items start with a low z-index */
+}
+
+.owl-carousel .owl-item.active.center {
+    transform: scale(3) !important;
+    /* Scale up center item */
+    z-index: 3 !important;
+    /* Bring to front */
+}
+
+.owl-carousel .owl-item.active:not(.center) {
+    transform: scale(2) !important;
+    /* Slightly smaller than center */
+    z-index: 2 !important;
+    /* Behind center item */
+}
+
+.owl-carousel .owl-item {
+    transform: scale(1.5) !important;
+    /* Smallest size */
+    z-index: 1 !important;
+    /* Add any other styling you need */
+}
+.owl-carousel .owl-stage-outer {
+    overflow: visible !important;
+}
+
+/* General item styling */
+.owl-carousel .owl-item {
+    
+    transform-origin: center !important;
+    transition: transform 0.3s ease, z-index 0.3s ease !important;
+    z-index: 1 !important; /* All items start with a low z-index */
+}
+
+/* Active center item - Largest and closest */
+.owl-carousel .owl-item.active.center {
+    transform: scale(3) !important; /* Scale up center item */
+    z-index: 3 !important; /* Bring to front */
+}
+
+/* Active non-center items - Medium size */
+.owl-carousel .owl-item.active:not(.center) {
+    transform: scale(2) !important; /* Slightly smaller than center */
+    z-index: 2 !important; /* Behind center item */
+    ;
+}
+
+/* Non-active items - Smallest size */
+.owl-carousel .owl-item {
+    transform: scale(2) !important; /* Smallest size */
+    z-index: 1 !important;
+    /* height: 200px !important */
+    /*  !important; Slight blur for depth effect */
+}
+
+/* 3D perspective effect */
+.owl-carousel {
+    perspective: 1200px; /* Controls the depth of 3D effect */
+}
+
+/* Centering the carousel and adding perspective */
+.owl-carousel .owl-stage {
+    transform-style:preserve-3d ; /* Preserve the 3D effect */
+}
+
+.mat-mdc-tab .mdc-tab__text-label{
+    color: #d9232e !important;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline{
+    background-color: white !important;
+}

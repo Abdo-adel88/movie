@@ -1,0 +1,31 @@
+.detalis {
+    max-width: 100%;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.layer {
+    background: rgba(0, 0, 0, 0.7) !important;
+    min-height: 100vh;
+}
+
+.ora {
+    color: #f2ba49;
+}
+
+.star-text {
+    color: yellow;
+}
+
+.z-3v {
+    z-index: 155151515151;
+    width: 100%;
+}
+
+mat-tab-group {
+    margin: 20px;
+}

@@ -1,0 +1,19 @@
+.zee 
+{
+    z-index: 6666666666666666666;
+    height: 70px !important;
+}
+.bg-nav{
+    background: rgba(0, 0, 0, 0.75) !important;
+    
+}
+.color-nav{
+    color: #999b9d;
+}
+@media only screen and (max-width: 1000px) {
+    .color-nav {
+     
+        background-color: black !important;
+        color: white;
+    }
+} 
