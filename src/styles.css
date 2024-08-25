@@ -191,34 +191,41 @@ input.form-control:focus {
     z-index: 1 !important;
     /* Add any other styling you need */
 }
+
 .owl-stage-outer {
     overflow: visible !important;
 }
 
 /* General item styling */
 .owl-item {
-    
+
     transform-origin: center !important;
     transition: transform 0.3s ease, z-index 0.3s ease !important;
-    z-index: 1 !important; /* All items start with a low z-index */
+    z-index: 1 !important;
+    /* All items start with a low z-index */
 }
 
 /* Active center item - Largest and closest */
 .owl-item.active.center {
-    transform: scale(3) !important; /* Scale up center item */
-    z-index: 3 !important; /* Bring to front */
+    transform: scale(3) !important;
+    /* Scale up center item */
+    z-index: 3 !important;
+    /* Bring to front */
 }
 
 /* Active non-center items - Medium size */
 .owl-item.active:not(.center) {
-    transform: scale(2) !important; /* Slightly smaller than center */
-    z-index: 2 !important; /* Behind center item */
+    transform: scale(2) !important;
+    /* Slightly smaller than center */
+    z-index: 2 !important;
+    /* Behind center item */
     ;
 }
 
 /* Non-active items - Smallest size */
 .owl-item {
-    transform: scale(2) !important; /* Smallest size */
+    transform: scale(2) !important;
+    /* Smallest size */
     z-index: 1 !important;
     /* height: 200px !important */
     /*  !important; Slight blur for depth effect */
@@ -226,18 +233,21 @@ input.form-control:focus {
 
 /* 3D perspective effect */
 .owl-carousel {
-    perspective: 1200px; /* Controls the depth of 3D effect */
+    perspective: 1200px;
+    /* Controls the depth of 3D effect */
 }
 
 /* Centering the carousel and adding perspective */
 .owl-stage {
-    transform-style:preserve-3d ; /* Preserve the 3D effect */
+    transform-style: preserve-3d;
+    /* Preserve the 3D effect */
 }
 
-.mat-mdc-tab .mdc-tab__text-label{
+.mat-mdc-tab .mdc-tab__text-label {
     color: #d9232e !important;
 }
-.mat-mdc-tab .mdc-tab-indicator__content--underline{
+
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
     background-color: white !important;
 }
 
@@ -245,111 +255,122 @@ input.form-control:focus {
 /* CSS */
 .button-49,
 .button-49:after {
-  width: 150px;
-  height: 50px;
-  line-height: 78px;
-  font-size: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(316deg, transparent 5%, #d9232e 5%);
-  border: 0;
-  color: #fff;
-  letter-spacing: 3px;
-  outline: transparent;
-  position: relative;
- 
-  -webkit-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
+    width: 150px;
+    height: 50px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(316deg, transparent 5%, #d9232e 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    outline: transparent;
+    position: relative;
+
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .button-49:after {
-  --slice-0: inset(50% 50% 50% 50%);
-  --slice-1: inset(80% -6px 0 0);
-  --slice-2: inset(50% -6px 30% 0);
-  --slice-3: inset(10% -6px 85% 0);
-  --slice-4: inset(40% -6px 43% 0);
-  --slice-5: inset(80% -6px 5% 0);
-  
-  content: 'ALTERNATE TEXT';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
-  clip-path: var(--slice-0);
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
 }
 
 .button-49:hover:after {
-  animation: 1s glitch;
-  animation-timing-function: steps(2, end);
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
 }
 
 @keyframes glitch {
-  0% {
-    clip-path: var(--slice-1);
-    transform: translate(-20px, -10px);
-  }
-  10% {
-    clip-path: var(--slice-3);
-    transform: translate(10px, 10px);
-  }
-  20% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 10px);
-  }
-  30% {
-    clip-path: var(--slice-3);
-    transform: translate(0px, 5px);
-  }
-  40% {
-    clip-path: var(--slice-2);
-    transform: translate(-5px, 0px);
-  }
-  50% {
-    clip-path: var(--slice-3);
-    transform: translate(5px, 0px);
-  }
-  60% {
-    clip-path: var(--slice-4);
-    transform: translate(5px, 10px);
-  }
-  70% {
-    clip-path: var(--slice-2);
-    transform: translate(-10px, 10px);
-  }
-  80% {
-    clip-path: var(--slice-5);
-    transform: translate(20px, -10px);
-  }
-  90% {
-    clip-path: var(--slice-1);
-    transform: translate(-10px, 0px);
-  }
-  100% {
-    clip-path: var(--slice-1);
-    transform: translate(0);
-  }
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
 }
 
 @media (min-width: 768px) {
-  .button-49,
-  .button-49:after {
-    width: 200px;
-    height: 50px;
-    line-height: 88px;
-  }
+
+    .button-49,
+    .button-49:after {
+        width: 230px;
+        height: 50px;
+        line-height: 88px;
+    }
 }
+
 @media (max-width: 768px) {
-  .button-49 {
-    width: 170px !important;
-    height: 50px !important;
-    line-height: 10px !important;
-    letter-spacing: 0px !important;
-    font-size: 10px !important;
+    .button-49 {
+        width: 230px !important;
+        height: 50px !important;
+        line-height: 10px !important;
+        letter-spacing: 0px !important;
+        font-size: 10px !important;
 
-  }
+    }
 }
-
