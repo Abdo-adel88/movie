@@ -1,12 +1,11 @@
 
 
-/* General paginator button style */
 ::ng-deep .p-paginator-pages button {
     background-color: #80151c !important;
     /* Different color for active page */
     border: 1px solid orange !important;
     color: white !important;
-    
+    margin: 6px;
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -17,7 +16,7 @@
     /* Different color for active page */
     border: 1px solid orange !important;
     color: white !important;
-    /* margin: 6px; */
+    margin: 6px;
     width: 25px;
     height: 25px;
     border-radius: 50%;

@@ -95,13 +95,13 @@
     font-size: 100px;
     font-weight: 900;
     top: 20%;
-    left: 37%;
+    left: 35.5%;
 }
 .fs-p{
     /* font-size: 100px; */
     font-weight: 900;
     top: 29%;
-    left: 39%;
+    left: 41%;
 }
 
 /* Media Query for Mobile Screens */
@@ -116,7 +116,7 @@
         /* font-size: 100px; */
         font-weight: 30;
         top: 29%;
-        left: 16%;
+        left: 25%;
     }
 
 }

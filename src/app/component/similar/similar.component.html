@@ -1,0 +1,23 @@
+<div class="container overflow-hidden  w-100 my-5 py-5 higth z-3v">
+    <h2 class="h1 fw-bolder fs-2 text-white ">More Like This :</h2>
+    <div class="borderr my-5 w-50"></div>
+    <div class="my-5 py-5"></div>
+
+    <div class="my-5 py-5 row">
+        <div *ngIf="movieDetails">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let movie of moviesimilar">
+                <ng-template carouselSlide [id]="movie.id">
+                    <a class="text-decoration-none" [routerLink]="['/moviedetails', movie.id]">
+                        <div class=" rounded-2">
+                            <img alt="" class="border border-warning rounded-2"
+                                [src]="imagePrefix + movie.poster_path" [alt]="movie.alt"
+                                [title]="movie.title">
+                        </div>
+                    </a>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    </div>
+</div>

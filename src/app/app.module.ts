@@ -28,6 +28,11 @@ import { MaterialModule } from './component/material/material.module';
 import { AboutmoviesComponent } from './component/aboutmovies/aboutmovies.component';
 import { VideoModalComponent } from './component/video-modal/video-modal.component';
 import { SafeUrlPipe } from './component/safe-url.pipe';
+import { AboutpeopleComponent } from './component/aboutpeople/aboutpeople.component';
+import { TvdetailsComponent } from './component/tvdetails/tvdetails.component';
+import { AboutTvComponent } from './component/about-tv/about-tv.component';
+import { SimilarComponent } from './component/similar/similar.component';
+import { SimilarTvComponent } from './component/similar-tv/similar-tv.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { SafeUrlPipe } from './component/safe-url.pipe';
     AboutmoviesComponent,
     VideoModalComponent,
     SafeUrlPipe,
+    AboutpeopleComponent,
+    TvdetailsComponent,
+    AboutTvComponent,
+    SimilarComponent,
+    SimilarTvComponent,
     
     
    ],

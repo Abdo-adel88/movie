@@ -1,12 +1,16 @@
-<!-- <app-netflix-loading *ngIf="isLoading"></app-netflix-loading> -->
+<app-netflix-loading *ngIf="isLoading"></app-netflix-loading>
 <app-header [headerTrendingMovie]="treandingMovies"></app-header>
 <div class="bg-head overflow-hidden">
     <div class="container mt-5 pt-5 ">
+    
         <div class="row ">
-            <div class="col-md-4 pading-left">
-                <h3 class="text-red">Playground</h3>
+           
+            <div class="col-md-4 pading-left ">
+              
+                <h2 class="text-red h1 fw-bolder fs-2">Playground</h2>
                 <div class="borderr mb-5 w-50"></div>
-                <h2 class="text-white">Top Trending <span class="text-red">Movies</span> To watch Right Now</h2>
+                <h2 class="text-white fs-3 fw-bolder">Top Trending <span class="text-red">Movies</span><br> To watch
+                    Right Now</h2>
                 <div class="borderr my-5 w-100"></div>
             </div>
 
@@ -17,8 +21,7 @@
                         <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" alt="">
                         <div class="overlay rounded-4">
                             <div class="pt-5">
-                                <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.title.split("
-                                    ").splice(0,3).join(' ')}}</p>
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.title.split(" ").splice(0,3).join(' ')}}</p>
                             </div>
                         </div>
                         <div class="vote rounded-circle text-center d-flex align-items-center justify-content-center">
@@ -27,10 +30,11 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-2 col-sm-6 rounded-4 bg-headr text-white w-mor mt-3 pointer-event">
+
+            <div class="col-md-2 col-sm-6 rounded-4 bg-headr mt-md-3 w-morr text-white  pointer-event">
                 <a class="text-decoration-none " routerLink="/tv-show">
-                    <div class="movies position-relative my-3 ">
-                        <div class=" rounded-4">
+                    <div class="movies  position-relative my-3 ">
+                        <div class="  rounded-4">
                             <div class="pt-5">
                                 <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">more...</p>
                             </div>
@@ -44,55 +48,54 @@
 
 
 
-            <div class="row mt-5 mb-4">
-                <div class="row">
-                    <div class="col-md-4 pading-left">
-                        <h3 class="text-red">Playground</h3>
-                        <div class="borderr mb-5 w-50"></div>
-                        <h2 class="text-white">Top Trending <span class="text-red">Tv</span> To watch Right Now</h2>
-                        <div class="borderr my-5 w-100"></div>
-                    </div>
-
-                    <div *ngFor="let movie of treandingTv" class=" col-md-4 col-lg-2 col-sm-6  rounded-4">
 
 
-                        <a class="text-decoration-none" [routerLink]="['/moviedetails',movie.id]">
-                            <div class="movies position-relative my-3 ">
-                                <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" height="350" alt="">
-                                <div class="overlay rounded-4">
-                                    <div class="pt-5">
-                                        <p class="text-center fw-bold mt-5 pt-5 text-warning">{{movie.name}}</p>
-                                    </div>
-                                </div>
-                                <div
-                                    class="vote rounded-circle text-center d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-star text-white "></i> {{movie.vote_average.toFixed(1)}}
-                                </div>
+            <div class="col-md-4 pading-left mt-5 pt-5">
+                <h2 class="text-red h1 fw-bolder fs-2">Playground</h2>
+                <div class="borderr mb-5 w-50"></div>
+                <h2 class="text-white fs-3 fw-bolder">Top Trending <span class="text-red">Tv</span><br> To watch
+                    Right Now</h2>
+                <div class="borderr my-5 w-100"></div>
+            </div>
+
+            <div *ngFor="let movie of treandingTv" class=" mt-md-5  col-md-4 col-lg-2 col-sm-6  rounded-4">
+
+
+                <a class="text-decoration-none" [routerLink]="['/tvdetails',movie.id]">
+                    <div class="movies position-relative my-3 ">
+                        <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" alt="">
+                        <div class="overlay rounded-4">
+                            <div class="pt-5">
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.name}}</p>
                             </div>
-                        </a>
+                        </div>
+                        <div class="vote rounded-circle text-center d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-star text-white "></i> {{movie.vote_average.toFixed(1)}}
+                        </div>
+                    </div>
+                </a>
 
-                    </div>
-                   
-                   
-                    <div class="col-md-2 col-sm-6 rounded-4 bg-headr text-white w-mor mt-3 pointer-event">
-                        <a class="text-decoration-none " routerLink="/tv-show">
-                            <div class="movies position-relative my-3 ">
-                                <div class=" rounded-4">
-                                    <div class="pt-5">
-                                        <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">more...</p>
-                                    </div>
-                                </div>
-        
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
 
 
-            
+            <div class="col-md-2 col-sm-6 rounded-4 bg-headr mt-md-5 w-mor text-white  pointer-event">
+                <a class="text-decoration-none " routerLink="/tv-show">
+                    <div class="movies  position-relative my-3 ">
+                        <div class="  rounded-4">
+                            <div class="pt-5">
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">more...</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
 
         </div>
+
+
+
+
     </div>
     <div class="borderr w-100 h-"></div>
     <app-footer></app-footer>

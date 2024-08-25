@@ -1,0 +1,52 @@
+.z-3v {
+    z-index: 155151515151;
+    width: 100%;
+}
+
+mat-tab-group {
+    margin: 20px;
+}
+
+.w-imggg {
+    width: 100px !important;
+    height: 150px !important;
+}
+
+.w-imgg {
+    width: 400px !important;
+    height:300px !important;
+}
+.higth {
+    
+    height:63vh !important;
+}
+.end-48{
+    right: 43%;
+    top: 43% !important;
+    font-size: 55px !important;
+}
+.poi{
+    cursor: pointer;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow: visible !important;
+}
+
+.owl-carousel .owl-item {
+    transform-origin: center !important;
+    transition: transform 0.3s ease !important;
+}
+
+.owl-carousel .owl-item.active.center {
+    transform: scale(1.7) !important;
+    z-index: 2 !important;
+}
+
+ .owl-carousel .owl-item.active {
+    transform: scale(1.1) !important;
+}
+
+.owl-carousel .owl-item {
+    z-index: 1 !important;
+} 

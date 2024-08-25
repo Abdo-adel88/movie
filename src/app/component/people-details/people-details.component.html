@@ -1,43 +1,25 @@
 <div class="background" [ngStyle]=" {'background-image' : 'url('+prefixPath+peopledeatlis?.profile_path+')'}">
-    <div class="layer">
+  <div class="layer">
 
-<div class="container">
-    <div class="row pt-5 align-items-center">
-      <div class="col-md-4 py-5">
-        <img class="  w-100 rounded-4" [src]=" prefixPath + peopledeatlis?.profile_path">
-      </div>
-      <div class="col-md-8 text-white ">
-        <div class="peopledeatlis py-5">
+    <div class="container">
+      <div class="row pt-5 align-items-center">
+        <div class="col-md-4 py-5">
+          <img class="  w-100 rounded-4" [src]=" prefixPath + peopledeatlis?.profile_path">
+        </div>
+        <div class="col-md-8 text-white ">
+          <div class="peopledeatlis py-5">
             <h2 class="py-3 fw-bold  ora h1 fs-1">{{peopledeatlis?.name}}</h2>
             <p class="py-3 fs-5 fw-bold text-white">{{peopledeatlis?.biography.split(" ").splice(0,43).join(' ')}}</p>
-              <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Known For :</span> {{peopledeatlis?.known_for_department}} </h4>
-              <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Date of Birth :</span> {{peopledeatlis?.birthday}} </h4>
-              <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Place of Birth :</span> {{peopledeatlis?.place_of_birth}} </h4>
+            <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Known For :</span>
+              {{peopledeatlis?.known_for_department}} </h4>
+            <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Date of Birth :</span>
+              {{peopledeatlis?.birthday}} </h4>
+            <h4 class="text-white"> <span class="py-3 fs-5 fw-bold ora">Place of Birth :</span>
+              {{peopledeatlis?.place_of_birth}} </h4>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
-
-
-<!-- <div class="background" [ngStyle]=" {'background-image' : 'url('+originalPoster+imgPath+')'}">
-    <div class="layer">
-      <div class="container">
-        <div class="row pt-5  align-items-center">
-          <div class="col-md-4 py-5">
-            <img *ngIf="movieDetails.poster_path" class=" w-100 rounded-4"
-              [src]="imagePrefix + movieDetails?.poster_path">
-          </div>
-          <div class="col-md-8">
-            <h2 class="py-3 fw-bold  ora h1 fs-1">{{movieDetails.title || movieDetails.name}}</h2>
-            <p class="py-3 fs-5 fw-bold text-white">{{movieDetails.overview}}</p>
-            <p class="py-3 fs-5 fw-bold ora ">Release Date: <span class="text-white">{{movieDetails.release_date ||
-                movieDetails.last_air_date}}</span></p>
-            <p class=" fs-5 fw-bold ora">Type: <span class=" text-white"> {{movieDetails.genres[1].name}} &
-                {{movieDetails.genres[0].name}}</span></p>
-            <p class=" fs-5 fw-bold ora ">vote: <span class=" text-white">
-                {{movieDetails.vote_average}} <i class="fa-solid fa-star star-text"></i></span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+<app-aboutpeople></app-aboutpeople>

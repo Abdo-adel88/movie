@@ -1,19 +1,214 @@
-.zee 
-{
+.zee {
     z-index: 6666666666666666666;
     height: 70px !important;
 }
-.bg-nav{
+
+.bg-nav {
     background: rgba(0, 0, 0, 0.75) !important;
-    
+
 }
-.color-nav{
+
+.color-nav {
     color: #999b9d;
 }
+
 @media only screen and (max-width: 1000px) {
     .color-nav {
-     
+
         background-color: black !important;
         color: white;
+        padding: 15px;
     }
-} 
+
+    .bg-nav {
+        background-color: black !important;
+
+    }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
+
+@media only screen and (max-width: 1000px) {
+    .containerr {
+        position: absolute;
+        margin: auto;
+        top: 10%;
+        left: 18% !important;
+        /* right: 80% !important; */
+        bottom: 0;
+        width: 200px !important;
+        height: 100px;
+    }
+
+    .position-search {
+        left: -52% !important;
+
+    }
+
+    .container {
+        --bs-gutter-x: 0rem !important;
+    }
+}
+
+.containerr {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 68%;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100px;
+    z-index: 555555555555555;
+}
+
+.containerr .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background: #a8161f;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.containerr .search:hover {
+    cursor: pointer;
+}
+
+.containerr .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.containerr .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+
+.containerr input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 48%;
+    bottom: 0;
+    /* left: 0; */
+    width: 60px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #a8161f;
+    color: white;
+    text-shadow: 0 0 10px #a8161f;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 #a8161f, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.containerr input:hover {
+    cursor: pointer;
+}
+
+.containerr input:focus {
+    width: 230px;
+    opacity: 1;
+    cursor: text;
+}
+
+.containerr input:focus~.search {
+    right: -10px;
+    background: #151515;
+    z-index: 6;
+}
+
+.containerr input:focus~.search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+
+.containerr input:focus~.search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+    
+}
+
+.containerr input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+
+
+.position-search {
+    /* right: 10% !important; */
+    left: -22% !important;
+    top: 85% !important;
+    height: 55vh !important;
+
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    background: rgba(0, 0, 0, 0.75) !important;
+}
+.a-link{
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    border-bottom: white 2px solid;
+    outline: none;
+
+}
+
+.a-link:hover {
+    color: white !important;
+    background:rgba(184, 182, 182, 0.196) ;
+}
+
+
+.btn-ze{
+    z-index: 55555555555555555555555555555555555;
+}
+.start-90{
+    left: 90% !important;
+    z-index: 55555555555555555555555555555555555;
+
+}

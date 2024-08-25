@@ -1,62 +1,62 @@
-
-
-
 <nav class="navbar zee position-fixed w-100 top-0 navbar-expand-lg  bg-nav">
 
   <div class="container ">
     <a class="navbar-brand  text-danger fw-bold   fs-3  m-0 p-0">
-      <img width="130" class=""
-        src="assets/images/Netflix_Logo_PMS.png" alt=""></a>
-        <button class="navbar-toggler  bg-red" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars text-white fs-3"></i>
-      </button>
+      <img width="130" class="" src="assets/images/Netflix_Logo_PMS.png" alt=""></a>
+    <button class="navbar-toggler  bg-red" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars text-white fs-3"></i>
+    </button>
 
-      
-    <div class="collapse navbar-collapse ms-md-5 color-nav" id="navbarSupportedContent">
+
+    <div class="collapse navbar-collapse ms-md-5 color-nav btn-ze" id="navbarSupportedContent">
       <ul *ngIf="isLogeedUser" class="navbar-nav  ms-md-5 ps-md-5 mb-2 mb-lg-0 ">
         <li class="nav-item ms-md-5 ps-md-5 ">
           <a class="nav-link color-nav    pointer-event  fw-bold"
-          routerLinkActive="  text-red  border-bottom  border-white fw-bolder" routerLink="/home">Home</a>        </li>
+            routerLinkActive="  text-red  border-bottom fs-5  border-white fw-bolder" routerLink="/home">Home</a>
+        </li>
 
 
 
         <li class="nav-item ms-md-5 ps-md-5">
           <a class="nav-link  color-nav  pointer-event  fw-bold"
-          routerLinkActive="  text-red border-bottom border-white fw-bolder" routerLink="/movies">Movies</a>
+            routerLinkActive="  text-red border-bottom fs-5 border-white fw-bolder" routerLink="/movies">Movies</a>
         </li>
 
         <li class="nav-item ms-md-5 ps-md-5">
           <a class="nav-link  color-nav  pointer-event  fw-bold"
-                  routerLinkActive="  text-red border-bottom border-white fw-bolder" routerLink="/tv-show">Tv-Show</a>
+            routerLinkActive="  text-red border-bottom fs-5 border-white fw-bolder" routerLink="/tv-show">Tv-Show</a>
         </li>
         <li class="nav-item ms-md-5 ps-md-5">
           <a class="nav-link color-nav  pointer-event  fw-bold"
-          routerLinkActive="  text-red  border-bottom border-white fw-bolder" routerLink="/people">People</a>        </li>
+            routerLinkActive="  text-red  border-bottom fs-5 border-white fw-bolder" routerLink="/people">People</a>
+        </li>
 
 
       </ul>
       <ul class="navbar-nav  ms-md-auto mb-2 mb-lg-0 d-flex align-items-start justify-content-center ">
 
 
+      
 
 
 
-
-        <div *ngIf="isLogeedUser" class="btn-group text-center p-0 m-0 border-0" role="group">
+        <div *ngIf="isLogeedUser" class="btn-group btn-ze text-center p-0 m-0 border-0" role="group">
           <button *ngIf="isLogeedUser" type="button" class="btn p-0 m-0 pt-3 dropdown-toggle border-0"
             data-bs-toggle="dropdown" aria-expanded="false">
             <li *ngIf="isLogeedUser" class="nav-item  p-0 m-0">
-              <a class="nav-link color-nav p-0 m-0 mt-1 w-100  fw-bold text-red"><i class="fa-solid fa-user text-white me-2"></i> Hi, {{userName}}
+              <a class="nav-link color-nav p-0 m-0 mt-1 w-100  fw-bold text-red"><i
+                  class="fa-solid fa-user text-white me-2"></i> Hi, {{userName}}
               </a>
             </li>
 
           </button>
 
           <ul class="dropdown-menu bg-red text-white">
-            <li *ngIf="isLogeedUser" class="nav-item w-btn text-center">
-              <a (click)="signout()" class="nav-link text-white dropdown-item w-btn text-center" routerLink="register">SignOut</a>
+            <li *ngIf="isLogeedUser" class="nav-item w-btn bg-red text-center">
+              <a (click)="signout()" class="nav-link text-white dropdown-item bg-red  w-btn text-center"
+                routerLink="register">SignOut</a>
             </li>
           </ul>
         </div>
@@ -66,5 +66,29 @@
       </ul>
 
     </div>
+    <div *ngIf="isLogeedUser" class="containerr">
+      <form [formGroup]="searchMedia" (keyup)="SearchMovie(searchMedia)">
+          <input type="text" placeholder="Search for a movie, tv shows..." formControlName="keyword" matInput #searchInput>
+          
+          <!-- Add clear button with search element -->
+          <div class="search" (click)="clearSearchInput(searchInput)"></div>
+  
+          <div class="row position-absolute position-search align-items-center justify-content-center">
+              <div class="col-12 text-white a" *ngFor="let result of results"
+                  [value]="result?.title == null ? result.name : result.title">
+                  <a class="text-decoration-none a-link text-white rounded-bottom-5 p-2 " *ngIf="result.media_type == 'movie' || result.media_type == 'tv'" 
+                      [routerLink]="result.media_type == 'movie' ? ['/moviedetails', result.id] : ['/tvdetails', result.id]"
+                      (click)="clearResults()">
+                      <img class="example-option-img pt-2 px-2" *ngIf="!result.profile_path && result.poster_path != null"
+                          aria-hidden [src]="prefixPath + result.poster_path" height="50" width="50">
+                      <img class="example-option-img" *ngIf="result.profile_path && result.profile_path != null"
+                          aria-hidden [src]="prefixPath + result.profile_path" height="50" width="50">
+                      <span class="w-100 h-100 fw-bolder fs-5 ">{{result?.title == null ? result?.name.split(" ").splice(0,3).join(' ') : result?.title.split(" ").splice(0,3).join(' ')}}</span>
+                  </a>
+              </div>
+          </div>
+      </form>
+  </div>
+  
   </div>
 </nav>

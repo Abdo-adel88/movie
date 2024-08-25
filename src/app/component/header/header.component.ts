@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 import { AllmoviesService } from 'src/app/service/allmovies.service';
 
+
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -32,7 +34,10 @@ export class HeaderComponent implements OnInit {
     nav: false,
     stagePadding: 50,
     autoWidth: true,
+    animateIn: 'flipInX',
+    animateOut: 'flipOutX'
   };
+  
 
   constructor(private _AllmoviesService: AllmoviesService) {}
 

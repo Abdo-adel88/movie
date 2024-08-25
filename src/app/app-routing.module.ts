@@ -12,18 +12,24 @@ import { NotfoundComponent } from './component/notfound/notfound.component';
 import { MoviedetailsComponent } from './component/moviedetails/moviedetails.component';
 import { PeopleDetailsComponent } from './component/people-details/people-details.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { TvdetailsComponent } from './component/tvdetails/tvdetails.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login', pathMatch:'full'},
   {path:'home',canActivate:[authGuard] ,component:HomeComponent},
   {path:'movies',canActivate:[authGuard] ,component:MoviesComponent},
-  {path:'moviedetails/:id',canActivate:[authGuard] ,component:MoviedetailsComponent},
+  // {path:'moviedetails/:id',canActivate:[authGuard] ,component:MoviedetailsComponent},
+  {path:'tvdetails/:id',canActivate:[authGuard] ,component:TvdetailsComponent},
   {path:'peopledetails/:id',canActivate:[authGuard] ,component:PeopleDetailsComponent},
   {path:'people',canActivate:[authGuard] ,component:PeopleComponent},
   {path:'tv-show',canActivate:[authGuard] ,component:TvshowComponent},
   {path:'footer',canActivate:[authGuard] ,component:FooterComponent},
 
-  
+  {
+    path: 'moviedetails/:id',
+    component: MoviedetailsComponent,
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange', // This will ensure that the component reloads when params change
+  },
   {path:'login',canActivate:[noauthdGuard],component:LoginComponent},
   {path:'register',canActivate:[noauthdGuard],component:RegisterComponent},
   {path:'**',component:NotfoundComponent}

@@ -35,4 +35,8 @@ export class AllmoviesService {
   getTrailer(type: string, id: string): Observable<any> {
     return this._HttpClient.get(`https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${this.apiKey}&language=en-US`)
   }
+
+  SearchMovie(keyword:string):Observable<any>{
+    return this._HttpClient.get(`https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&language=en-US&query=${keyword}&page=1&include_adult=false`)
+  }
 }

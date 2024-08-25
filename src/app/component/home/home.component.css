@@ -3,10 +3,33 @@
 } */
 
 .bg-headr {
-    background-image: linear-gradient(to bottom, black 30%, #d9232e ) !important;
+    background-image: linear-gradient(to bottom, black 30%, #d9232e) !important;
 }
-.w-mor{
-    height: 300px;
-     width: 200px;
 
+.w-mor {
+    height: 300px;
+    width: 200px;
+    margin-top: 64px !important;
 }
+.w-morr {
+    height: 300px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .w-mor{
+     
+        width:100%;
+        margin-top: 10px !important;
+
+    }
+    .w-morr{
+     
+        width:100%;
+
+    }
+    .start-search{
+        left: 37.5% !important;
+    }
+} 
+

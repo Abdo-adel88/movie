@@ -1,14 +1,14 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Renderer2 } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+// import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Params } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { AllmoviesService } from 'src/app/service/allmovies.service';
-
 @Component({
-  selector: 'app-aboutmovies',
-  templateUrl: './aboutmovies.component.html',
-  styleUrls: ['./aboutmovies.component.css']
+  selector: 'app-about-tv',
+  templateUrl: './about-tv.component.html',
+  styleUrls: ['./about-tv.component.css']
 })
-export class AboutmoviesComponent implements AfterViewInit {
+export class AboutTvComponent  implements AfterViewInit{
   key: string = '';
   id: string = '';
   movieDetails: any;
@@ -40,7 +40,7 @@ export class AboutmoviesComponent implements AfterViewInit {
       this.id = params['id'];
       this.loadMovieDetails();
     });
-    this._AllmoviesService.getMovieDetalis('movie', this.id).subscribe({
+    this._AllmoviesService.getMovieDetalis('tv', this.id).subscribe({
       next: (response) => {
         this.movieDetails = response;
         this.imgPath = this.movieDetails.backdrop_path;
@@ -54,7 +54,7 @@ export class AboutmoviesComponent implements AfterViewInit {
   }
 
   loadMovieDetails(): void {
-    this._AllmoviesService.getMovieDetalis('movie', this.id).subscribe({
+    this._AllmoviesService.getMovieDetalis('tv', this.id).subscribe({
       next: (response) => {
         this.movieDetails = response;
         this.imgPath = this.movieDetails.backdrop_path;
@@ -90,4 +90,5 @@ export class AboutmoviesComponent implements AfterViewInit {
     },
     nav: false,
   }
+  
 }
