@@ -1,4 +1,4 @@
-<div *ngIf="movieDetails">
+<div class="overflow-hidden" *ngIf="movieDetails">
   <div class="background" [ngStyle]=" {'background-image' : 'url('+originalPoster+imgPath+')'}">
     <div class="layer">
       <div class="container">
@@ -16,16 +16,18 @@
             <p class=" fs-5 fw-bold ora ">vote: <span class=" text-white">
                 {{movieDetails.vote_average.toFixed(1)}} <i class="fa-solid fa-star star-text text-warning"></i></span>
             </p>
-            <button (click)="getvideos(vediosCast[0].key)" class="button-49 my-3 d-flex align-items-center justify-content-center">
+            <button (click)="getvideos(vediosCast[0].key)"
+              class="button-49 my-3 d-flex align-items-center justify-content-center">
               <h2 class="p-0 m-0">WATCH TRAILAR </h2><i class="fa-brands fa-youtube rounded-circle ms-1 mt-1 fs-5"></i>
             </button>
           </div>
         </div>
       </div>
+  
+
+      <app-aboutmovies></app-aboutmovies>
+      <app-video-modal [videoKey]="key"></app-video-modal>
+      <app-similar></app-similar>
     </div>
   </div>
 </div>
-
-<app-aboutmovies></app-aboutmovies>
-<app-video-modal [videoKey]="key"></app-video-modal>
-<app-similar></app-similar>

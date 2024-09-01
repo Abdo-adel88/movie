@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private _UserService: UserService, private _AllmoviesService: AllmoviesService) { }
   treandingMovies: any = []
   treandingTv: any[] = []
-  isLoading:boolean=true;
+  // isLoading:boolean=true;
 
   imagePrefix: string = "https://image.tmdb.org/t/p/w500"
   ngOnInit(): void {
@@ -39,9 +39,7 @@ export class HomeComponent implements OnInit {
       }
     })
     
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 4000);
+  
 
   }
 }

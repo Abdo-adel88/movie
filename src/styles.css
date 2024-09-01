@@ -27,6 +27,10 @@ input.form-control:focus {
     background-color: #a8a8a83d;
     height: 3px;
 }
+.borderra {
+    background-color: white;
+    height: 3px;
+}
 
 .w-im {
     width: 100% !important;
@@ -373,4 +377,13 @@ input.form-control:focus {
         font-size: 10px !important;
 
     }
+}
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab {
+    flex-grow: 1;
+    display: flex;
+    /* justify-content: space-between !important; */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+    border-color: white !important;
 }

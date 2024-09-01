@@ -8,17 +8,17 @@ mat-tab-group {
 }
 
 .w-imggg {
-    width: 100px !important;
-    height: 150px !important;
+    width: 150px !important;
+    height: 140px !important;
 }
 
 .w-imgg {
     width: 400px !important;
-    height:300px !important;
+    height:300px;
 }
 .higth {
     
-    height:63vh !important;
+    height:83vh !important;
 }
 .end-48{
     right: 43%;
@@ -28,25 +28,125 @@ mat-tab-group {
 .poi{
     cursor: pointer;
 }
+/* .bg-headd {
+    background-image: url("src/assets/images/interior-theatre-theater-empty-theater.jpg");
+    background-position: center center;
+    background-size: cover;
 
+} */
+.detalis {
+    max-width: 100%;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.layer {
+    background: rgba(0, 0, 0, 0.4) !important;
+    min-height: 100vh;
+}
+.startt{
+    left: 5%;
+    /* bottom: 0% !important; */
+    top: 62% !important;
+}
+.owl-carousel .owl-item {
+    transform-origin: center !important;
+    transition: transform 0.3s ease, z-index 0.3s ease !important;
+    z-index: 1 !important;
+    /* All items start with a low z-index */
+}
+
+.owl-carousel .owl-item.active.center {
+    transform: scale(3) !important;
+    /* Scale up center item */
+    z-index: 3 !important;
+    /* Bring to front */
+}
+
+.owl-carousel .owl-item.active:not(.center) {
+    transform: scale(2) !important;
+    /* Slightly smaller than center */
+    z-index: 2 !important;
+    /* Behind center item */
+}
+
+.owl-carousel .owl-item {
+    transform: scale(1.5) !important;
+    /* Smallest size */
+    z-index: 1 !important;
+    /* Add any other styling you need */
+}
 .owl-carousel .owl-stage-outer {
     overflow: visible !important;
 }
 
+/* General item styling */
 .owl-carousel .owl-item {
+    
     transform-origin: center !important;
-    transition: transform 0.3s ease !important;
+    transition: transform 0.3s ease, z-index 0.3s ease !important;
+    z-index: 1 !important; /* All items start with a low z-index */
 }
 
+/* Active center item - Largest and closest */
 .owl-carousel .owl-item.active.center {
-    transform: scale(1.7) !important;
-    z-index: 2 !important;
+    transform: scale(3) !important; /* Scale up center item */
+    z-index: 3 !important; /* Bring to front */
 }
 
- .owl-carousel .owl-item.active {
-    transform: scale(1.1) !important;
+/* Active non-center items - Medium size */
+.owl-carousel .owl-item.active:not(.center) {
+    transform: scale(2) !important; /* Slightly smaller than center */
+    z-index: 2 !important; /* Behind center item */
+    ;
 }
 
+/* Non-active items - Smallest size */
 .owl-carousel .owl-item {
+    transform: scale(2) !important; /* Smallest size */
     z-index: 1 !important;
-} 
+    /* height: 200px !important */
+    /*  !important; Slight blur for depth effect */
+}
+
+/* 3D perspective effect */
+.owl-carousel {
+    perspective: 1200px; /* Controls the depth of 3D effect */
+}
+
+/* Centering the carousel and adding perspective */
+.owl-carousel .owl-stage {
+    transform-style:preserve-3d ; /* Preserve the 3D effect */
+}
+.fs{
+    font-size: 100px;
+    font-weight: 900;
+    top: 20%;
+    left: 35.5%;
+}
+.fs-p{
+    /* font-size: 100px; */
+    font-weight: 900;
+    top: 29%;
+    left: 41%;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .fs{
+        font-size: 60px;
+        font-weight: 600;
+        top: 20%;
+        left: 22%;
+    }
+    .fs-p{
+        /* font-size: 100px; */
+        font-weight: 30;
+        top: 29%;
+        left: 25%;
+    }
+
+}

@@ -1,4 +1,4 @@
-<div >
+<div class="overflow-hidden">
   <div class="background" [ngStyle]=" {'background-image' : 'url('+originalPoster+imgPath+')'}">
     <div class="layer">
       <div class="container">
@@ -9,20 +9,23 @@
           <div class="col-md-8">
             <h2 class="py-3 fw-bold  ora h1 fs-1">{{ tvDetails.name}}</h2>
             <p class="py-3 fs-5 fw-bold text-white">{{tvDetails.overview}}</p>
-            <p class="py-3 fs-5 fw-bold ora ">Release Date: <span class="text-white">{{tvDetails.first_air_date}}</span></p>
+            <p class="py-3 fs-5 fw-bold ora ">Release Date: <span class="text-white">{{tvDetails.first_air_date}}</span>
+            </p>
             <p class=" fs-5 fw-bold ora">Type: <span class=" text-white"> {{tvDetails.genres[0].name}} </span></p>
             <p class=" fs-5 fw-bold ora ">vote: <span class=" text-white">
                 {{tvDetails.vote_average.toFixed(1)}} <i class="fa-solid fa-star star-text text-warning"></i></span>
             </p>
-            <button (click)="getvideos(vediosCast[0].key)" class="button-49 d-flex align-items-center justify-content-center">
+            <button (click)="getvideos(vediosCast[0].key)"
+              class="button-49 d-flex align-items-center justify-content-center">
               <h2 class="p-0 m-0">WATCH TRAILAR </h2><i class="fa-brands fa-youtube rounded-circle mt-1 ms-1 fs-5"></i>
             </button>
           </div>
         </div>
       </div>
+
+      <app-about-tv></app-about-tv>
+      <app-video-modal [videoKey]="key"></app-video-modal>
+      <app-similar-tv></app-similar-tv>
     </div>
   </div>
 </div>
-<app-about-tv></app-about-tv>
-<app-video-modal [videoKey]="key"></app-video-modal>
-<app-similar-tv></app-similar-tv>

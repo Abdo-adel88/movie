@@ -32,7 +32,7 @@ export class AboutmoviesComponent implements AfterViewInit {
       this.id = params['id'];
       this.loadMovieDetails();
     });
-    
+
   }
 
   ngAfterViewInit(): void {
@@ -78,16 +78,19 @@ export class AboutmoviesComponent implements AfterViewInit {
     touchDrag: true,
     pullDrag: false,
     autoplay: true,
-    dots: false,
     autoplayTimeout: 3000,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
-      0: { items: 2 },
-      400: { items: 2 },
-      740: { items: 3 },
-      940: { items: 7 }
+      0: { items: 5 },
+      400: { items: 5 },
+      740: { items: 15 },
+      940: { items:15 }
     },
     nav: false,
+    stagePadding: 50,
+    autoWidth: true,
+    animateIn: 'flipInX',
+    animateOut: 'flipOutX'
   }
 }

@@ -1,42 +1,47 @@
 <mat-tab-group class="text-white">
-    <mat-tab  label="Actors">
+    <mat-tab class="bg-black " label="Actors">
         <div class="container overflow-hidden  w-100 my-5 py-5 higth z-3v">
-            <div class="my-5 py-5 ">
-
+            <h2 class="h1 fw-bolder fs-2 text-white ">Actors In This Movie :</h2>
+            <div class="borderra text-white my-5 w-50"></div>
+            <div class="my-5 py-3 "></div>
+            <div class="my-5 py-5 row">
                 <owl-carousel-o *ngIf="imgPathCast && imgPathCast.length > 0" [options]="customOptions">
                     <ng-container *ngFor="let movie of imgPathCast">
                         <ng-template carouselSlide>
                             <a class="text-decoration-none" [routerLink]="['/peopledetails', movie.id]">
-                                <div class=" mx-5 my-3 mx-4">
-                                    <img [src]="originalPoster + movie.profile_path" class="w-imggg rounded-4"
-                                        height="350" alt="">
+                                <div class=" rounded-2 ">
+                                    <img [src]="originalPoster + movie.profile_path"
+                                        class=" border border-warning rounded-2 "  alt="">
                                 </div>
                             </a>
                         </ng-template>
                     </ng-container>
                 </owl-carousel-o>
-
-
-
-
-
-
-
             </div>
+
+
+
+
+
+
+
+
         </div>
     </mat-tab>
 
 
-    <mat-tab *ngIf="vediosCast" label="Videos">
+    <mat-tab class="bg-black" *ngIf="vediosCast" label="Videos">
         <div class="container my-5 py-5 overflow-hidden  w-100 mt-5 pt-5  ">
             <div class=" ">
-                <div class="text-white py-4 row ">
+                <div class="text-white py-4 row  g-2">
                     <div class="col-md-4" *ngFor="let movie of vediosCast">
                         <div (click)="getvideos(movie.key)" class="mx-3 rounded-4 position-relative poi ">
-                            
-                            <img title="ee" class="img-fluid w-imgg  rounded-4" src="https://img.youtube.com/vi/{{movie?.key}}/hqdefault.jpg"
-                                data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                <i class="fa-brands fa-youtube text-red  position-absolute top-50 end-48 fs-1 fw-bolder"></i>
+
+                            <img title="ee" class="img-fluid w-imgg  rounded-4"
+                                src="https://img.youtube.com/vi/{{movie?.key}}/hqdefault.jpg" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                            <i
+                                class="fa-brands fa-youtube text-red  position-absolute top-50 end-48 fs-1 fw-bolder"></i>
                         </div>
                     </div>
                 </div>
@@ -44,7 +49,7 @@
         </div>
     </mat-tab>
 
-    <mat-tab *ngIf="imgPost" class="text-white" label="Poster">
+    <mat-tab *ngIf="imgPost" class="bg-black" label="Poster">
         <div class="container  higth w-100 my-5 py-5  z-3v">
             <div class="  row ">
 
@@ -52,8 +57,9 @@
                 <div class="col-md-4 " *ngFor="let movie of imgPost">
 
 
-                    <div    class=" my-3 mx-4  rounded-4">
-                        <img [src]="imagePrefix + movie.file_path" class="w-imgg img-fluid rounded-4" height="350" alt="">
+                    <div class=" my-3 mx-4  rounded-4">
+                        <img [src]="imagePrefix + movie.file_path" class="w-imgg img-fluid rounded-4" height="350"
+                            alt="">
                     </div>
 
 
@@ -68,6 +74,7 @@
             </div>
         </div>
     </mat-tab>
+
 </mat-tab-group>
 
 

@@ -3,14 +3,16 @@
 }
 
 .background {
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
+    background-size:cover ;
+    background-attachment: fixed;
+    background-position: center  ;
+
+    z-index: -111;
 }
 
 .layer {
     background: rgba(0, 0, 0, 0.7) !important;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 .ora {

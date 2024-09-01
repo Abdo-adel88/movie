@@ -1,4 +1,4 @@
-<app-netflix-loading *ngIf="isLoading"></app-netflix-loading>
+<!-- <app-netflix-loading *ngIf="isLoading"></app-netflix-loading> -->
 <app-header [headerTrendingMovie]="treandingMovies"></app-header>
 <div class="bg-head overflow-hidden">
     <div class="container mt-5 pt-5 ">
@@ -7,7 +7,7 @@
            
             <div class="col-md-4 pading-left ">
               
-                <h2 class="text-red h1 fw-bolder fs-2">Playground</h2>
+                <h2 class="text-red h1 fw-bolder fs-2">NETFLIX</h2>
                 <div class="borderr mb-5 w-50"></div>
                 <h2 class="text-white fs-3 fw-bolder">Top Trending <span class="text-red">Movies</span><br> To watch
                     Right Now</h2>
@@ -36,7 +36,7 @@
                     <div class="movies  position-relative my-3 ">
                         <div class="  rounded-4">
                             <div class="pt-5">
-                                <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">more...</p>
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">See More...</p>
                             </div>
                         </div>
 
@@ -51,7 +51,7 @@
 
 
             <div class="col-md-4 pading-left mt-5 pt-5">
-                <h2 class="text-red h1 fw-bolder fs-2">Playground</h2>
+                <h2 class="text-red h1 fw-bolder fs-2">NETFLIX</h2>
                 <div class="borderr mb-5 w-50"></div>
                 <h2 class="text-white fs-3 fw-bolder">Top Trending <span class="text-red">Tv</span><br> To watch
                     Right Now</h2>
@@ -66,7 +66,7 @@
                         <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" alt="">
                         <div class="overlay rounded-4">
                             <div class="pt-5">
-                                <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.name}}</p>
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.name.split(" ").splice(0,3).join(' ')}}</p>
                             </div>
                         </div>
                         <div class="vote rounded-circle text-center d-flex align-items-center justify-content-center">
@@ -83,7 +83,7 @@
                     <div class="movies  position-relative my-3 ">
                         <div class="  rounded-4">
                             <div class="pt-5">
-                                <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">more...</p>
+                                <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">See More...</p>
                             </div>
                         </div>
 

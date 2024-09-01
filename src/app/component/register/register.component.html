@@ -26,13 +26,13 @@
 
                             </div>
                         </div>
-                        <div class="mb-3 w-100">
+                        <div class="mb-3 w-100 mt-3">
                             <label for="exampleFormControlInput2 " class="form-label text-white">Email :</label>
                             <input formControlName="email" type="email" class="form-control bg-transparent"
                                 id="exampleFormControlInput2" placeholder="name@example.com">
 
                             <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched"
-                                class="text-danger">
+                                class="text-danger mt-2">
                                 <p *ngIf="registerForm.get('email')?.getError('required')" class="my-0">email is
                                     required
                                 </p>
@@ -49,7 +49,7 @@
                                 id="exampleFormControlInput3" placeholder="*********">
 
                             <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched"
-                                class="text-danger">
+                                class="text-danger mt-2">
                                 <p *ngIf="registerForm.get('password')?.getError('required')" class="my-0">Password
                                     is
                                     required
@@ -69,7 +69,7 @@
                             <input formControlName="rePassword" type="password" class="form-control bg-transparent"
                                 id="exampleFormControlInput4" placeholder="*********">
                             <div *ngIf="registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched"
-                                class="text-danger">
+                                class="text-danger mt-2">
                                 <p *ngIf="registerForm.get('rePassword')?.getError('required')" class="my-0">
                                     Password is
                                     required
@@ -90,7 +90,7 @@
                             <input formControlName="phone" type="tel" class="form-control bg-transparent"
                                 id="exampleFormControlInput5" placeholder="01*******">
                             <div *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched"
-                                class="text-danger">
+                                class="text-danger mt-2">
                                 <p *ngIf="registerForm.get('phone')?.getError('required')" class="my-0">Password is
                                     required
                                 </p>
@@ -113,7 +113,7 @@
                         <hr class=" text-white h-25">
 
                         <div class=" mt-0">
-                            <p class="text-red "><span class="text-white">Already have an account?</span> <a
+                            <p class="text-red fs-6"><span class="text-white">Already have an account?</span> <a
                                     routerLink="/login" class="text-red text-decoration-none "> Sign in</a></p>
                         </div>
                     </form>

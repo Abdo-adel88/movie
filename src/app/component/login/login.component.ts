@@ -27,25 +27,32 @@ export class LoginComponent {
   handelLogin(loginForm: FormGroup) {
     if (loginForm.valid) {
       this.isLoading = true;
+  
       this._AuthService.login(loginForm.value).subscribe({
         next: (Response) => {
-
+          // Store the token and update the user information
           localStorage.setItem('Token', Response.token);
-     
-          this._router.navigate(['/home']);
-          this._AuthService.isLoggedInSubject.next(true);
-          this.isLoading = false;
-          console.log(Response.user.name);
           this.userName = Response.user.name;
-          this._UserService.setUserName(this.userName); 
+          this._UserService.setUserName(this.userName);
+          this._AuthService.isLoggedInSubject.next(true);
+  
+          // Delay the navigation by 6 seconds
+          setTimeout(() => {
+            this._router.navigate(['/home']).then(() => {
+              // Set `isLoading` to false after navigation is complete
+              this.isLoading = false;
+            });
+          }, 4000);
         },
         error: (err) => {
           console.log(err);
           this.apiErrorMessage = err.error.message;
+          // Set `isLoading` to false if an error occurs
           this.isLoading = false;
         },
-      })
+      });
     }
   }
+  
 
 }
