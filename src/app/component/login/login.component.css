@@ -42,3 +42,11 @@ input {
     width: 100% !important;
   }
 }
+
+.g_id_signin {
+  margin-top: 20px; /* يمكن تعديل المسافة حسب الحاجة */
+}
+
+.btn.bg-red {
+  background-color: #f44336; /* لون الخلفية */
+}

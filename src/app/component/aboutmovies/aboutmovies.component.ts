@@ -82,8 +82,8 @@ export class AboutmoviesComponent implements AfterViewInit {
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
-      0: { items: 5 },
-      400: { items: 5 },
+      0: { items: 6 },
+      400: { items: 10 },
       740: { items: 15 },
       940: { items:15 }
     },

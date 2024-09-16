@@ -16,7 +16,7 @@ mat-tab-group {
 
 .higth {
 
-    height: 86vh !important;
+    height: 90vh !important;
 }
 
 .end-48 {
@@ -175,7 +175,7 @@ mat-tab-group {
 @media (min-width: 768px) and (max-width: 1243px) {
     .higth {
 
-        height: 100vh !important;
+        height: 50vh !important;
     }
 }
 .ms{

@@ -95,28 +95,73 @@
     font-size: 100px;
     font-weight: 900;
     top: 20%;
-    left: 35.5%;
+    left: 33%;
 }
 .fs-p{
     /* font-size: 100px; */
     font-weight: 900;
     top: 29%;
-    left: 41%;
+    left: 39%;
 }
 
 /* Media Query for Mobile Screens */
-@media (max-width: 768px) {
+@media (min-width:550px) and (max-width: 768px)  {
     .fs{
-        font-size: 60px;
-        font-weight: 600;
+        font-size: 90px !important;
+        font-weight: 800;
         top: 20%;
-        left: 22%;
+        left: 23% !important;
     }
     .fs-p{
         /* font-size: 100px; */
         font-weight: 30;
         top: 29%;
-        left: 25%;
+        left: 32%;
+    }
+    .startt{
+        left: 0%;
+        /* bottom: 0% !important; */
+        top: 62% !important;
+    }
+
+}
+@media (min-width:768px) and (max-width: 1000px)  {
+    .fs{
+        font-size: 100px !important;
+        font-weight: 700;
+        top: 20%;
+        left: 26% !important;
+    }
+    .fs-p{
+        font-size: 20px;
+        font-weight: 30;
+        top: 29%;
+        left: 32%;
+    }
+    .startt{
+        left: 7.5%;
+        /* bottom: 0% !important; */
+        top: 62% !important;
+    }
+
+}
+@media (min-width:0px) and (max-width: 550px)  {
+    .fs{
+        font-size: 60px;
+        font-weight: 600;
+        top: 20%;
+        left: 19%;
+    }
+    .fs-p{
+        /* font-size: 100px; */
+        font-weight: 30;
+        top: 29%;
+        left: 21%;
+    }
+    .startt{
+        left: 0%;
+        /* bottom: 0% !important; */
+        top: 62% !important;
     }
 
 }

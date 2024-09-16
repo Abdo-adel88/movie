@@ -10,25 +10,25 @@
     </button>
 
 
-    <div class="collapse navbar-collapse ms-md-5 color-nav btn-ze" id="navbarSupportedContent">
-      <ul *ngIf="isLogeedUser" class="navbar-nav  ms-md-5 ps-md-5 mb-2 mb-lg-0 ">
-        <li class="nav-item ms-md-5 ps-md-5 ">
+    <div class="collapse position-left navbar-collapse ms-md-5 color-nav btn-ze" id="navbarSupportedContent">
+      <ul *ngIf="isLogeedUser" class="navbar-nav  ms-lg-5 ps-lg-2 mb-2 mb-lg-0 ">
+        <li class="nav-item ms-lg-5 ps-lg-5 ">
           <a class="nav-link color-nav    pointer-event  fw-bold"
             routerLinkActive="  text-red  border-bottom fs-5  border-white fw-bolder" routerLink="/home">Home</a>
         </li>
 
 
 
-        <li class="nav-item ms-md-5 ps-md-5">
+        <li class="nav-item ms-lg-5 ps-lg-5">
           <a class="nav-link  color-nav  pointer-event  fw-bold"
             routerLinkActive="  text-red border-bottom fs-5 border-white fw-bolder" routerLink="/movies">Movies</a>
         </li>
 
-        <li class="nav-item ms-md-5 ps-md-5">
+        <li class="nav-item ms-lg-5  ps-lg-5">
           <a class="nav-link  color-nav  pointer-event  fw-bold"
             routerLinkActive="  text-red border-bottom fs-5 border-white fw-bolder" routerLink="/tv-show">Tv-Show</a>
         </li>
-        <li class="nav-item ms-md-5 ps-md-5">
+        <li class="nav-item ms-lg-5 ps-lg-5">
           <a class="nav-link color-nav  pointer-event  fw-bold"
             routerLinkActive="  text-red  border-bottom fs-5 border-white fw-bolder" routerLink="/people">People</a>
         </li>
@@ -38,7 +38,7 @@
       <ul class="navbar-nav  ms-md-auto mb-2 mb-lg-0 d-flex align-items-start justify-content-center ">
 
 
-      
+
 
 
 
@@ -68,27 +68,32 @@
     </div>
     <div *ngIf="isLogeedUser" class="containerr">
       <form [formGroup]="searchMedia" (keyup)="SearchMovie(searchMedia)">
-          <input type="text" placeholder="Search for a movie, tv shows..." formControlName="keyword" matInput #searchInput>
-          
-          <!-- Add clear button with search element -->
-          <div class="search" (click)="clearSearchInput(searchInput)"></div>
-  
-          <div class="row position-absolute position-search align-items-center justify-content-center">
-              <div class="col-12 text-white a" *ngFor="let result of results"
-                  [value]="result?.title == null ? result.name : result.title">
-                  <a class="text-decoration-none a-link text-white rounded-bottom-5 p-2 " *ngIf="result.media_type == 'movie' || result.media_type == 'tv'" 
-                      [routerLink]="result.media_type == 'movie' ? ['/moviedetails', result.id] : ['/tvdetails', result.id]"
-                      (click)="clearResults()">
-                      <img class="example-option-img pt-2 px-2" *ngIf="!result.profile_path && result.poster_path != null"
-                          aria-hidden [src]="prefixPath + result.poster_path" height="50" width="50">
-                      <img class="example-option-img" *ngIf="result.profile_path && result.profile_path != null"
-                          aria-hidden [src]="prefixPath + result.profile_path" height="50" width="50">
-                      <span class="w-100 h-100 fw-bolder fs-5 ">{{result?.title == null ? result?.name.split(" ").splice(0,3).join(' ') : result?.title.split(" ").splice(0,3).join(' ')}}</span>
-                  </a>
-              </div>
+        <input type="text" placeholder="Search for a movie, tv shows..." formControlName="keyword" matInput
+          #searchInput>
+
+        <!-- Add clear button with search element -->
+        <div class="search" (click)="clearSearchInput(searchInput)"></div>
+
+        <div class="row position-absolute position-search align-items-center justify-content-center">
+          <div class="bg">
+            <div class="col-12 text-white a" *ngFor="let result of results"
+              [value]="result?.title == null ? result.name : result.title">
+              <a class="text-decoration-none a-link text-white rounded-bottom-5 p-2 "
+                *ngIf="result.media_type == 'movie' || result.media_type == 'tv'"
+                [routerLink]="result.media_type == 'movie' ? ['/moviedetails', result.id] : ['/tvdetails', result.id]"
+                (click)="clearResults()">
+                <img class="example-option-img pt-2 px-2" *ngIf="!result.profile_path && result.poster_path != null"
+                  aria-hidden [src]="prefixPath + result.poster_path" height="50" width="50">
+                <img class="example-option-img" *ngIf="result.profile_path && result.profile_path != null" aria-hidden
+                  [src]="prefixPath + result.profile_path" height="50" width="50">
+                <span class="w-100 h-100 fw-bolder fs-5 ">{{result?.title == null ? result?.name.split("
+                  ").splice(0,3).join(' ') : result?.title.split(" ").splice(0,3).join(' ')}}</span>
+              </a>
+            </div>
           </div>
+        </div>
       </form>
-  </div>
-  
+    </div>
+
   </div>
 </nav>

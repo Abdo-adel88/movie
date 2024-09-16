@@ -12,7 +12,7 @@
     color: #999b9d;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 993px) {
     .color-nav {
 
         background-color: black !important;
@@ -28,37 +28,56 @@
 
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:700");
 
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+    .position-left {
+        position: relative;
+       right: 20% !important;
+        /* margin-top: 10px !important; */
+    }
+}
+
+
+
 @media only screen and (max-width: 1000px) {
     .containerr {
         position: absolute;
-        margin: auto;
+        /* margin: auto; */
         top: 10%;
-        left: 18% !important;
+        left: 60% !important;
         /* right: 80% !important; */
         bottom: 0;
-        width: 200px !important;
-        height: 100px;
+        /* width: 200px !important; */
+        /* height: 100px; */
     }
 
     .position-search {
-        left: -52% !important;
+        /* left: -52% !important; */
+        left: -100% !important;
+        top: 10% !important;
+        width: 210px !important;
+        /* height: 55vh !important; */
 
+        /* overflow-y: auto; */
     }
 
     .container {
         --bs-gutter-x: 0rem !important;
     }
+
+    .containerr input:focus {
+        width: 167px !important;
+    }
 }
 
 .containerr {
     position: absolute;
-    margin: auto;
+    /* margin: auto; */
     top: 0;
-    left: 68%;
+    left: 80%;
     right: 0;
     bottom: 0;
-    width: 250px;
-    height: 100px;
+    width: 100px;
+    /* height: 100px; */
     z-index: 555555555555555;
 }
 
@@ -117,7 +136,7 @@
     position: absolute;
     margin: auto;
     top: 0;
-    right: 48%;
+    right: 40%;
     bottom: 0;
     /* left: 0; */
     width: 60px;
@@ -168,7 +187,7 @@
     background: white;
     border-radius: 0%;
     transform: rotate(-45deg);
-    
+
 }
 
 .containerr input::placeholder {
@@ -181,15 +200,21 @@
 
 .position-search {
     /* right: 10% !important; */
-    left: -22% !important;
-    top: 85% !important;
+    left: -170% !important;
+    top: 100% !important;
+    /* width: 310px !important; */
     height: 55vh !important;
 
     overflow-y: auto;
     /* Enable vertical scrolling */
-    background: rgba(0, 0, 0, 0.75) !important;
 }
-.a-link{
+
+.bg {
+    background: rgba(0, 0, 0, 0.75) !important;
+
+}
+
+.a-link {
     width: 100% !important;
     height: 100% !important;
     display: block !important;
@@ -200,14 +225,15 @@
 
 .a-link:hover {
     color: white !important;
-    background:rgba(184, 182, 182, 0.196) ;
+    background: rgba(184, 182, 182, 0.196);
 }
 
 
-.btn-ze{
+.btn-ze {
     z-index: 55555555555555555555555555555555555;
 }
-.start-90{
+
+.start-90 {
     left: 90% !important;
     z-index: 55555555555555555555555555555555555;
 

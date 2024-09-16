@@ -44,6 +44,8 @@ export class MoviedetailsComponent implements OnInit, OnDestroy {
         this.imgPathCast = this.movieDetails.credits.cast.slice(0, 12);
         this.imgPost = this.movieDetails.images.backdrops.slice(0, 3);
         this.vediosCast = this.movieDetails.videos.results.slice(0, 3);
+        console.log(this.movieDetails);
+        
       }
     });
   }
