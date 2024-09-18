@@ -1,16 +1,16 @@
 <nav class="navbar zee position-fixed w-100 top-0 navbar-expand-lg  bg-nav">
 
-  <div class="container ">
+  <div class="container-lg ">
     <a class="navbar-brand  text-danger fw-bold   fs-3  m-0 p-0">
       <img width="130" class="" src="assets/images/Netflix_Logo_PMS.png" alt=""></a>
-    <button class="navbar-toggler  bg-red" type="button" data-bs-toggle="collapse"
+    <button *ngIf="isLogeedUser" class="navbar-toggler  bg-red" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
       aria-label="Toggle navigation">
       <i class="fa-solid fa-bars text-white fs-3"></i>
     </button>
 
 
-    <div class="collapse position-left navbar-collapse ms-md-5 color-nav btn-ze" id="navbarSupportedContent">
+    <div  class="collapse position-left ps-md-5  navbar-collapse  color-nav btn-ze" id="navbarSupportedContent">
       <ul *ngIf="isLogeedUser" class="navbar-nav  ms-lg-5 ps-lg-2 mb-2 mb-lg-0 ">
         <li class="nav-item ms-lg-5 ps-lg-5 ">
           <a class="nav-link color-nav    pointer-event  fw-bold"
@@ -35,7 +35,7 @@
 
 
       </ul>
-      <ul class="navbar-nav  ms-md-auto mb-2 mb-lg-0 d-flex align-items-start justify-content-center ">
+      <ul class="navbar-nav  ms-md-auto ps-ul mb-2 mb-lg-0 d-flex align-items-start justify-content-center ">
 
 
 

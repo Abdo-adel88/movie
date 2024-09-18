@@ -7,6 +7,9 @@
     background: rgba(0, 0, 0, 0.75) !important;
 
 }
+.ps-ul{
+    padding-left: 10px !important;
+}
 
 .color-nav {
     color: #999b9d;
@@ -22,7 +25,7 @@
 
     .bg-nav {
         background-color: black !important;
-
+width: 100% !important;
     }
 }
 
@@ -31,7 +34,7 @@
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
     .position-left {
         position: relative;
-       right: 20% !important;
+        right: 20% !important;
         /* margin-top: 10px !important; */
     }
 }
@@ -54,10 +57,10 @@
         /* left: -52% !important; */
         left: -100% !important;
         top: 10% !important;
-        width: 210px !important;
+        /* width: 250px !important; */
         /* height: 55vh !important; */
 
-        /* overflow-y: auto; */
+        overflow-y: auto !important;
     }
 
     .container {
@@ -200,7 +203,7 @@
 
 .position-search {
     /* right: 10% !important; */
-    left: -170% !important;
+    left: -158% !important;
     top: 100% !important;
     /* width: 310px !important; */
     height: 55vh !important;
@@ -208,6 +211,23 @@
     overflow-y: auto;
     /* Enable vertical scrolling */
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d9232e;
+    border-radius: 10px;
+}
+
+
+
 
 .bg {
     background: rgba(0, 0, 0, 0.75) !important;

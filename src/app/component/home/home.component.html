@@ -15,12 +15,12 @@
             </div>
 
 
-            <div *ngFor="let movie of treandingMovies" class="col-md-4 col-lg-2 col-sm-6 rounded-4">
+            <div *ngFor="let movie of treandingMovies" class="col-md-4 col-lg-2 col-sm-5 col-6 rounded-4">
                 <a class="text-decoration-none" [routerLink]='["/moviedetails",movie.id]'>
                     <div class="movies position-relative my-3 ">
-                        <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" alt="">
+                        <img [src]="imagePrefix+movie.poster_path" class="w-100  rounded-4" alt="">
                         <div class="overlay rounded-4">
-                            <div class="pt-5">
+                            <div class="pt-md-4 pt-2">
                                 <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.title.split(" ").splice(0,3).join(' ')}}</p>
                             </div>
                         </div>
@@ -31,9 +31,9 @@
                 </a>
             </div>
 
-            <div class="col-md-2 col-sm-6 rounded-4 bg-headr mt-md-3 ms-2 movies w-morr text-white  pointer-event">
+            <div class="col-md-2 col-sm-6 col-5 rounded-4 bg-headr mt-md-3 ms-2 movies w-morr text-white  pointer-event">
                 <a class="text-decoration-none " routerLink="/movies">
-                    <div class=" col-md-2 w-morr col-sm-6 rounded-4 movies position-relative  ">
+                    <div class=" col-md-2 w-morr col-sm-6 col-5  rounded-4 movies position-relative  ">
                         <div class="  rounded-4">
                             <div class="pt-5 mt-4 me-4">
                                 <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">See More...</p>
@@ -47,10 +47,10 @@
 
 
 
+<div class="col-12"></div>
 
 
-
-            <div class="col-md-4 pading-left mt-5 pt-5">
+            <div class="col-md-4  pading-left mt-5 pt-5">
                 <h2 class="text-red h1 fw-bolder fs-2">NETFLIX</h2>
                 <div class="borderr mb-5 w-50"></div>
                 <h2 class="text-white fs-3 fw-bolder">Top Trending <span class="text-red">Tv</span><br> To watch
@@ -58,14 +58,14 @@
                 <div class="borderr my-5 w-100"></div>
             </div>
 
-            <div *ngFor="let movie of treandingTv" class=" mt-md-5  col-md-4 col-lg-2 col-sm-6  rounded-4">
+            <div *ngFor="let movie of treandingTv" class=" mt-md-5  col-md-4 col-lg-2 col-sm-5 col-6 rounded-4">
 
 
                 <a class="text-decoration-none" [routerLink]="['/tvdetails',movie.id]">
                     <div class="movies position-relative my-3 ">
-                        <img [src]="imagePrefix+movie.poster_path" class="w-img  rounded-4" alt="">
+                        <img [src]="imagePrefix+movie.poster_path" class="w-100  rounded-4" alt="">
                         <div class="overlay rounded-4">
-                            <div class="pt-5">
+                            <div class="pt-md-4 pt-2">
                                 <p class="text-center fw-bolder fs-4 mt-5 pt-5 text-warning">{{movie.name.split(" ").splice(0,3).join(' ')}}</p>
                             </div>
                         </div>
@@ -78,9 +78,9 @@
             </div>
 
 
-            <div class="col-md-2 col-sm-6 rounded-4 bg-headr ms-2 movies w-mor text-white  pointer-event">
+            <div class="col-md-2 col-sm-6 col-5 rounded-4 bg-headr ms-2 movies w-mor text-white  pointer-event">
                 <a class="text-decoration-none  " routerLink="/tv-show">
-                    <div class="col-md-2 w-morr col-sm-6 rounded-4 movies position-relative ">
+                    <div class="col-md-2 w-morr col-sm-6 col-5 rounded-4 movies position-relative ">
                         <div class="  rounded-4">
                             <div class="pt-5 mt-4 me-4">
                                 <p class="text-center fw-bolder fs-4 mt-5 pt-2 text-white">See More...</p>

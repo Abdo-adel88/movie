@@ -107,6 +107,7 @@ input.form-control:focus {
 
 .bg-head {
     background-image: linear-gradient(to bottom, black 65%, #80151c) !important;
+    margin-bottom: -1px !important;
 }
 
 ::ng-deep .p-paginator-pages button {
